@@ -1,0 +1,87 @@
+<htm>
+	<head>
+		<script type="text/javascript">
+		
+		var player1 = "bill";
+		var player2 = "alana";
+		
+		var weaponPlayer1 ='';
+		var weaponPlayer2 ='';
+		
+		var winsPlayer1 =0;
+		var winsPlayer2 =0;
+		
+		var weapons = ['rock' , 'paper', 'scissors'];
+		
+		var weaponPlayer1 =(weapons[parseInt(Math.random()*weapons.length) %3]);
+		var weaponPlayer2 =(weapons[parseInt(Math.random()*weapons.length) %3]);
+		
+		while(winsPlayer1 < 3 && winsPlayer2 < 3){
+		
+			weaponPlayer1 =(weapons[parseInt(Math.random()*weapons.length) %3]);
+			weaponPlayer2 =(weapons[parseInt(Math.random()*weapons.length) %3]);
+		
+			console.log(player1 + " " + weaponPlayer1);
+		
+			console.log(player2 + " " + weaponPlayer2);
+		
+
+			if(weaponPlayer1 == weaponPlayer2){
+				console.log("This round is a draw");
+				continue;
+			}
+			if(weaponPlayer1 == "rock"){
+					if(weaponPlayer2 == "scissors"){
+						
+						console.log(player1 + " wins this round");
+						winsPlayer1++;
+					}else if(weaponPlayer2 == "paper"){
+						console.log(player2 + " wins this round");
+						winsPlayer2++;
+					}else{
+						console.log("invalid choice for " +player2);
+					}
+			}else if(weaponPlayer1 == "paper"){
+					if(weaponPlayer2 == "rock"){
+						
+						console.log(player1 + " wins this round");
+						winsPlayer1++;
+					}else if(weaponPlayer2 == "scissors"){
+						console.log(player2 + " wins this round");
+						winsPlayer2++;
+					}else{
+						console.log("invalid choice for " +player2);
+					}
+			}else if(weaponPlayer1 == "scissors"){
+					if(weaponPlayer2 == "paper"){
+						
+						console.log(player1 + " wins this round");
+						winsPlayer1++;
+					}else if(weaponPlayer2 == "rock"){
+						console.log(player2 + " wins this round");
+						winsPlayer2++;
+					}else{
+						console.log("invalid choice for " +player2);
+					}
+			}else{
+				console.log("invalid choice for " +player1);
+			}
+			
+			console.log("The score is: " + player1 + " " + winsPlayer1 + " " + player2 + " " + winsPlayer2);
+				
+		}
+		if(winsPlayer1 > winsPlayer2){
+			console.log(player1 + " won the game");
+		}else if(winsPlayer2 > winsPlayer1){
+			console.log(player2 + " won the game");
+		}else{
+			console.log("fatal error");
+		}
+		
+		</script>
+
+	</head>	
+	<body>
+		
+	</body>
+</htm>

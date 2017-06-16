@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+	<title>RPS</title>
+
+	<script type="text/javascript">
+		
+		var petewins = 0;
+		
+		var samwins = 0;
+		
+		var weapons = ['rock' , 'paper', 'scissors'];
+		
+		while(petewins < 3 && samwins < 3) {
+				var peteWeaponOfChoice = weapons[parseInt(Math.random()*weapons.length)*3];
+				var samWeaponOfChoice = weapons[parseInt(Math.random()*weapons.length) *3];
+			
+			if( peteWeaponOfChoice == samWeaponOfChoice){
+			
+				console.log('Tie game');
+			}
+			else if( peteWeaponOfChoice == 'rock' && samWeaponOfChoice == 'paper' || peteWeaponOfChoice == 'scissors' && samWeaponOfChoice == 'rock' || peteWeaponOfChoice == 'paper' && samWeaponOfChoice == 'scissors'){
+			
+				console.log('The sam wins'); samwins++;
+			}
+			else{
+				console.log('pete wins'); petewins++;
+			}
+		}
+			if(petewins > samwins){
+			
+			console.log(" Game over, pete has 3 wins");
+		}
+			else if(samwins > petewins){
+			
+			console.log(" Game over, sam has 3 wins");
+		}
+			else{
+			
+			console.log("keep going");
+		}
+	</script>
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+</body>
+
+</html>
